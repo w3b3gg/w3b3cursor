@@ -1,10 +1,11 @@
 # W3B3 Cursor to ct.js - Catmods
+> Use a texture to change the mouse cursor simply and happily
 
-Use a texture to change the mouse cursor simply and happily
+[![w3b3 Cursor to ct.js](w3b3cursor.png "w3b3 Cursor to ct.js")](https://marcobrunodev.itch.io/w3b3cursor)
 
 ## How to install
 
-1. Download zip on [marcobrunodev.itch.io/w3b3cursor](marcobrunodev.itch.io/w3b3cursor)
+1. Download zip on [marcobrunodev.itch.io/w3b3cursor](https://marcobrunodev.itch.io/w3b3cursor)
 2. Import zip on ct.js
    1. Open ctjs in your PC
    2. Click on Project tab
@@ -29,3 +30,6 @@ In order for the pointer cursor to work, you need to check the box on the templa
 2. Click on Template tab
 3. Open the desired template
 4. Check the Cursor pointer box on the right side panel
+
+# License
+[MPL-2.0](https://www.mozilla.org/en-US/MPL/2.0)
