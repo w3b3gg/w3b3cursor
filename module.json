@@ -1,0 +1,43 @@
+{
+  "main": {
+    "name": "w3b3cursor",
+    "tagline": "Use a texture to change the mouse cursor simply and happily",
+    "version": "1.0.0",
+    "authors": [
+      {
+        "name": "Marco Bruno",
+        "mail": "marco.bruno.dev@proton.me"
+      },
+      {
+        "name": "Joviane Jardim",
+        "mail": "jotahjotah@proton.me"
+      }
+    ],
+    "categories": [
+      "customization"
+    ]
+  },
+  "fields": [
+    {
+      "name": "Cursors",
+      "type": "h2"
+    },
+    {
+      "name": "Auto",
+      "key": "auto@@texture",
+      "type": "texture"
+    },
+    {
+      "name": "Pointer",
+      "key": "pointer@@texture",
+      "type": "texture"
+    }
+  ],
+  "templateExtends": [
+    {
+      "name": "Cursor pointer",
+      "key": "cursorpointer",
+      "type": "checkbox"
+    }
+  ]
+}
