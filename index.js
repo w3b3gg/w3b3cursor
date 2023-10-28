@@ -1,4 +1,5 @@
-ct.w3b3 = {}
+if (!ct.hasOwnProperty('w3b3')) ct.w3b3 = {}
+
 ct.w3b3.createImageBase64FromTexture = (textureName) => {
   const cursorTexture = ct.res.getTexture(textureName)[0]
   const tempCanvas = document.createElement('canvas')
