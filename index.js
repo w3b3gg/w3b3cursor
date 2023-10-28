@@ -15,4 +15,3 @@ ct.w3b3.createImageBase64FromTexture = (textureName) => {
 
   return tempCanvas.toDataURL('image/png')
 }
-
