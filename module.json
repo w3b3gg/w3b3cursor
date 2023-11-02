@@ -2,7 +2,7 @@
   "main": {
     "name": "w3b3cursor",
     "tagline": "Use a texture to change the mouse cursor simply and happily",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "authors": [
       {
         "name": "Marco Bruno",

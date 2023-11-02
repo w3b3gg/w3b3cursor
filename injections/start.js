@@ -1,4 +1,4 @@
-;(function (ct) {
+(function (ct) {
     const autoBase64Image = ct.w3b3.createImageBase64FromTexture('/*%auto%*/')
 
     window.document.body.style.cursor = `url(${autoBase64Image}), auto`
