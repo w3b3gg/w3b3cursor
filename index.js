@@ -1,7 +1,7 @@
 if (!ct.hasOwnProperty('w3b3')) ct.w3b3 = {
   pointer: null,
   cursor: null,
-  scale: 1,
+  scale: null,
   prevScale: null
 }
 
@@ -16,6 +16,7 @@ ct.w3b3.getScale = () => {
 }
 
 ct.w3b3.createImageBase64FromTexture = (textureName) => {
+  ct.w3b3.scale = ct.w3b3.getScale()
   const cursorTexture = ct.res.getTexture(textureName)[0]
   const tempCanvas = document.createElement('canvas')
   const scaled = {
@@ -24,13 +25,15 @@ ct.w3b3.createImageBase64FromTexture = (textureName) => {
   }
   tempCanvas.width = scaled.x
   tempCanvas.height = scaled.y
+  const sprite = new PIXI.Sprite(cursorTexture)
+  sprite.scale.set(ct.w3b3.scale, ct.w3b3.scale)
   const tempRenderer = new PIXI.Renderer({
       width: scaled.x,
       height: scaled.y,
       view: tempCanvas,
       transparent: true
   });
-  tempRenderer.render(new PIXI.Sprite(cursorTexture))
+  tempRenderer.render(sprite)
   return tempCanvas.toDataURL('image/png')
 }
 
