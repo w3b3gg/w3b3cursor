@@ -2,7 +2,8 @@ if (!ct.hasOwnProperty('w3b3')) ct.w3b3 = {
   pointer: null,
   cursor: null,
   scale: null,
-  prevScale: null
+  prevScale: null,
+  timer: null
 }
 
 ct.w3b3.getScale = () => {
@@ -39,12 +40,16 @@ ct.w3b3.createImageBase64FromTexture = (textureName) => {
 
 ct.w3b3.createCursors = () => {
   ct.w3b3.cursor = ct.w3b3.createImageBase64FromTexture('/*%auto%*/')
-  ct.w3b3.pointer = ct.w3b3.createImageBase64FromTexture('/*%pointer%*/')
-  window.document.body.style.cursor = `url(${ct.w3b3.cursor}), auto`
-  window.document.querySelector('html').style.cursor = `url(${ct.w3b3.cursor}), auto`  
+  ct.w3b3.pointer = ct.w3b3.createImageBase64FromTexture('/*%pointer%*/') 
+  ct.w3b3.setCursor()
 }
 
-ct.w3b3.timer;
+ct.w3b3.setCursor = (cursorName = 'auto') => {
+  const cursor = cursorName === 'pointer' ? ct.w3b3.pointer : ct.w3b3.cursor
+  window.document.body.style.cursor = `url(${cursor}), auto`
+  window.document.querySelector('html').style.cursor = `url(${cursor}), auto`  
+}
+
 onresize = (event) => {
   clearTimeout(ct.w3b3.timer);
     ct.w3b3.timer = setTimeout(() => {
